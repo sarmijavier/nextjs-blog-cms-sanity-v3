@@ -116,7 +116,7 @@ export default async function PostPage({ params }: Props) {
           Recent Stories
         </h2>
         <Suspense>
-          <MoreStories skip={post._id} limit={2} />
+          <MoreStories limit={2} />
         </Suspense>
       </aside>
     </div>
