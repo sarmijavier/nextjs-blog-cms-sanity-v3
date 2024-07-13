@@ -18,7 +18,7 @@ export const heroQuery = groq`*[_type == "post" && defined(slug.current)] | orde
   ${postFields}
 }`;
 
-export const moreStoriesQuery = groq`*[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {
+export const moreStoriesQuery = groq`*[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {
   ${postFields}
 }`;
 

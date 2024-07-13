@@ -9,13 +9,13 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { moreStoriesQuery } from "@/sanity/lib/queries";
 
 export default async function MoreStories(params: {
-  skip: string;
   limit: number;
 }) {
   const data = await sanityFetch<MoreStoriesQueryResult>({
     query: moreStoriesQuery,
     params,
   });
+
 
   return (
     <>
