@@ -8,7 +8,16 @@ const inter = Inter({
   display: "swap",
 });
 
-export { metadata, viewport } from "next-sanity/studio";
+export { viewport } from "next-sanity/studio";
+
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Acme Dashboard',
+  description: 'The official Next.js Course Dashboard, built with App Router.',
+  icons: [
+    { url: '/icon.png' },
+  ]};
 
 export default function RootLayout({
   children,
